@@ -1,28 +1,326 @@
 <!DOCTYPE html>
-<html>
-<head> 
-<meta charset="utf-8"> 
-<title>Hallo,motherfucker</title> 
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeerSub - 专门订阅海外软件</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="image/logo.svg" />
+    <script src="main.js" defer></script>
+    <script src="service.js" defer></script>
 </head>
 <body>
+    
+    <!-- 首页 -->
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="image/logo1.svg"> 
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#" class="nav-links">首页</a></li>
+                    <li><a href="#" class="nav-links">服务</a></li>
+                    <li><a href="#" class="nav-links">关于</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="info">
+            <div class="content0">
+                <h1>DeerSub为你订阅 
+                    <span id="dynamic-text"></span>
+                    <span class="cursor"></span>
+                </h1>
+            </div>
+            <div id="circle">
+                <div class="feature one">
+                    <img src="image/bitcoin.svg">
+                    <h1>最便宜</h1>
+                    <p class="featureline">的代订阅服务</p>
+                </div>
+                <div class="feature two">
+                    <img src="image/weixin.svg">
+                    <h1>微信支付宝</h1>
+                    <p class="featureline"> 用中国人最熟悉的方式支付</p>
+                </div>
+                <div class="feature three">
+                    <img 
+                        src="image/computer-mouse-solid.svg">
+                    <h1>点击5次</h1>
+                        <p class="featureline">鼠标即可订阅成功</p>
+                </div>
+                <div class="feature four">
+                    <img
+                        src="image/down.svg"
+                        alt="hands point down"/>
+                    <h1>往下滑</h1>
+                    <p class="featureline">还有Apple Store账号、Steam外区、便宜机场等服务</p>
+                </div>
+            </div>
 
-<div style="opacity:0.5;position:absolute;left:50px;width:300px;height:150px;background-color:#40B3DF"></div>
+            <div class="fakenumber">
+                <hr />
+                <p class="bullshit">👨‍👩‍👧‍👦 截止
+                    <span class="bullshit">
+                    <script class="bullshit">
+                        date = new Date().toLocaleDateString();
+                        document.write(date);
+                    </script>
+                    </span>
+                ：已有
+                <span class="bullshitnumber">1014</span>
+                位用户使用了订阅服务</p>
+                <p class="littleshit">感谢用户信任, DeerSub会持续改进。</p>
+                <hr />
+            </div>
+        </div>
+    </div>
 
-<div style="font-family:verdana;padding:20px;border-radius:10px;border:10px solid #EE872A;">
+    <!-- 服务 -->
+    <div class="service">
+        <ul class="accordion">
+            <li>
+                <input type="checkbox" name="accordion" id="first" checked>
+                <label for="first" class="biglabel">AI の 订阅</label>
+                    <div class="content">
+                        <div class="flexbox AI-item-1">
+                            <div class="fleximg"><img src="image/sevice-logo/ChatGPT-Plus.png"></div>
+                            <div class="flexh1">ChatGPT Plus</div>
+                            <div class="flexdes">最强大的AI:GPT4,最低仅xx元/月</div>
+                            <div  class="flexbut">
+                                <button type="button"  data-modal-target="#modal" class="enter">进入</button>
+                                
+                                <!-- modal -->
+                                <div class="modal" id="modal">
+                                    <div class="modal-header">
+                                        <div class="one"></div>
+                                      <div class="title">请选择订阅产品</div>
+                                      <button data-close-button class="close-button">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="modal-radio-group">
+                                            
+                                            <div class="input-container">
+                                                <input type="radio" id="GPT4together" name="GPT4">
+                                                <div class="radio-tile">
+                                                    <label for="GPT4together" class="smalllabel">共用账号</label>
+                                                    <div class="price">xxx/月</div>
+                                                    <div class="radio-des">xxx</div>
+                                                </div>
+                                            </div>
 
-<div style="opacity:0.3;position:absolute;left:120px;width:100px;height:200px;background-color:#8AC007"></div>
+                                            <div class="input-container">
+                                                <input type="radio" id="GPT4yours" name="GPT4">
+                                                <div class="radio-tile">
+                                                    <label for="GPT4yours">一键订阅</label>
+                                                    <div class="price">xxx/月</div>
+                                                    <div class="radio-des">xxx</div>
+                                                </div>
+                                            </div>
 
-<h1>关掉! </h1>
+                                        </div>
+                                    </div>
+                                    <div class="next">
+                                        下一步
+                                    </div>
+                                </div>
 
-<div style="letter-spacing:12px;">Manipulate Text</div>
+                                <div id="overlay"></div>
+                            </div>
+                        </div>
+                        <div class="flexbox AI-item-2">
+                            <div class="fleximg"><img src="image/sevice-logo/openai.svg"></div>
+                            <div class="flexh1">OpenAI 账户一键注册</div>
+                            <div class="flexdes">GPT3.5,直接提供账号密码</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                        <div class="flexbox AI-item-3">
+                            <div class="fleximg"><img src="image/sevice-logo/midjourney.svg"></div>
+                            <div class="flexh1">Midjourney</div>
+                            <div class="flexdes">打磨产品中...</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                    </div>
+            </li>
+            <li>
+                <input type="checkbox" name="accordion" id="second" checked>
+                <label for="second" class="biglabel">影音平台订阅</label>
+                    <div class="content">
+                        <div class="flexbox Video-item-1">
+                            <div class="fleximg"><img src="image/sevice-logo/netflix-icon.svg"></div>
+                            <div class="flexh1">Netflix</div>
+                            <div class="flexdes">打磨产品中...</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                        <div class="flexbox Video-item-2">
+                            <div class="fleximg"><img src="image/sevice-logo/apple.svg"></div>
+                            <div class="flexh1">Apple TV+</div>
+                            <div class="flexdes">打磨产品中...</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                        <div class="flexbox Video-item-3">
+                            <div class="fleximg"><img src="image/sevice-logo/disneyplus.svg"></div>
+                            <div class="flexh1">Disney+</div>
+                            <div class="flexdes">打磨产品中...</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                        <div class="flexbox Video-item-4">
+                            <div class="fleximg"><img src="image/sevice-logo/youtube.svg"></div>
+                            <div class="flexh1">YouTube Premium</div>
+                            <div class="flexdes">打磨产品中...</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                        <div class="flexbox Video-item-5">
+                            <div class="fleximg"><img src="image/sevice-logo/hbo.svg"></div>
+                            <div class="flexh1">HBO+</div>
+                            <div class="flexdes">打磨产品中...</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                    </div>
+            </li>
+            <li>
+                <input type="checkbox" name="accordion" id="third">
+                <label for="third" class="biglabel">其他平台订阅</label>
+                    <div class="content">
+                        <div class="flexbox other-item-1">
+                            <div class="fleximg"><img src="image/sevice-logo/onlyfans-seeklogo.svg"></div>
+                            <div class="flexh1">OnlyFans</div>
+                            <div class="flexdes">打磨产品中...</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                        <div class="flexbox other-item-2">
+                            <div class="fleximg"><img src="image/sevice-logo/new-2023-twitter-logo-x-icon-design_1017-45418.avif"></div>
+                            <div class="flexh1">X Premium+</div>
+                            <div class="flexdes">打磨产品中...</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                        <div class="flexbox other-item-3">
+                            <div class="fleximg"><img src="image/sevice-logo/reader-logo.jpg"></div>
+                            <div class="flexh1">Reader</div>
+                            <div class="flexdes">打磨产品中...</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                        <div class="flexbox other-item-3">
+                            <div class="fleximg"><img src="image/sevice-logo/medium.svg"></div>
+                            <div class="flexh1">Medium</div>
+                            <div class="flexdes">打磨产品中...</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                        <div class="flexbox other-item-3">
+                            <div class="fleximg"><img src="image/sevice-logo/black-question-mark-ornament.svg"></div>
+                            <div class="flexh1">没看到你想要的平台？</div>
+                            <div class="flexdes">联系我们</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                    </div>
+            </li>
+            <li>
+                <input type="checkbox" name="accordion" id="fourth">
+                <label for="fourth" class="biglabel">外区工具箱</label>
+                    <div class="content">
+                        <div class="flexbox tools-1">
+                            <div class="fleximg"><img src="image/sevice-logo/phone-call.svg"></div>
+                            <div class="flexh1">海外手机号</div>
+                            <div class="flexdes">打磨产品中...</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                        <div class="flexbox tools-2">
+                            <div class="fleximg"><img src="image/sevice-logo/envelope.svg"></div>
+                            <div class="flexh1">海外邮箱</div>
+                            <div class="flexdes">打磨产品中...</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                        <div class="flexbox tools-3">
+                            <div class="fleximg"><img src="image/sevice-logo/visa.svg"></div>
+                            <div class="flexh1">海外虚拟卡</div>
+                            <div class="flexdes">打磨产品中...</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                        <div class="flexbox tools-4">
+                            <div class="fleximg"><img src="image/sevice-logo/steam.svg"></div>
+                            <div class="flexh1">Steam 外区账号</div>
+                            <div class="flexdes">打磨产品中...</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                        <div class="flexbox tools-5">
+                            <div class="fleximg"><img src="image/sevice-logo/apple.svg"></div>
+                            <div class="flexh1">Apple Store 外区账号</div>
+                            <div class="flexdes">打磨产品中...</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                        <div class="flexbox tools-6">
+                            <div class="fleximg"><img src="image/sevice-logo/airplane.svg"></div>
+                            <div class="flexh1">机场</div>
+                            <div class="flexdes">打磨产品中...</div>
+                            <div  class="flexbut">
+                                <button type="button" class="enter">进入</button>
+                            </div>
+                        </div>
+                    </div>
+            </li>
+        </ul>
+    </div>  
 
-<div style="color:#40B3DF;">Colors
-<span style="background-color:#B4009E;color:#ffffff;">Boxes</span>
-</div>
 
-<div style="color:#000000;">and more...</div>
 
-</div>
+
+
+    <!-- <div class="service">
+        <div class="AI-header">
+            <div class="ant-collapse-expand-icon">
+            <span role="img" aria-label="right" class="anticon anticon-right ant-collapse-arrow">
+                <svg viewBox="64 64 896 896" focusable="false" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true" style="transform: rotate(90deg);">
+                    <path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z">
+                    </path>
+                </svg>
+            </span>
+            </div> 
+            <span class="AI-header-text">AI 服务
+            </span>
+        </div>
+    </div> -->
+
+    <!-- 关于 -->
+
 
 </body>
+
+<!-- <footer>
+    © 2024 DeerSub.com. All rights reserved.隐私政策 联系我们
+</footer> -->
+
 </html>
