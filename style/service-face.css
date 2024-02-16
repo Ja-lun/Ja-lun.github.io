@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: Microsoft YaHei;
+}
+
+/* 服务界面 */
+.service {
+    width: 100%;
+    min-height: 80vh; 
+    position: relative;
+    overflow: hidden;
+    background: #e3edf7;
+    box-sizing: border-box;
+}
+.accordion {
+    margin: 7.2vh auto;
+    width: 70vw;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #e3edf7;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255,0.7);
+}
+.accordion li .biglabel{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.biglabel::before{
+    content:'+';
+    margin-right:10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+input[type="checkbox"]{
+    display: none;
+}
+.accordion .content{
+    color:#555;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordion input[type="checkbox"]:checked +label +.content{
+    max-height: 4000px;
+    padding:10px 10px 20px;
+}
+.accordion input[type="checkbox"]:checked +label::before{
+    content: '-';
+}
+
+/* 详细服务 */
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.flexbox {
+    width: 16vw;
+    margin: 0.5vw;
+    padding: 0.25vw;
+    border-radius: 8px;
+    background: #e3edf7;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255,0.7);
+}
+.fleximg {
+    text-align: center;
+}
+.fleximg img{
+    width: 20%;
+    margin-top: 1.5vh;
+}
+.flexh1{
+    text-align: center;
+    font-size: 1.5vw;
+    color: black;
+    margin-top: 2vh;
+    font-weight: bold;
+}
+.flexdes{
+    text-align: center;
+    color: black;
+    margin-top: 0.5vh;
+}
+.flexbut{
+    text-align: center;
+}
+.enter{
+    position: relative;
+    width: 50px;
+    padding: 7.5px 0;
+    margin: 2vh 0 1vh 0;
+    font-weight: bold;
+    font-size: 1vw;
+    border: 1px;
+    color:black;
+    background-color: #c2dcf2;
+    cursor: pointer;
+    overflow: hidden;
+    text-transform: uppercase;
+    border-radius: 4px;
+}

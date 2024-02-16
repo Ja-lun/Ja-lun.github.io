@@ -1,0 +1,147 @@
+*{
+  margin:0;
+  padding: 0;
+  font-family: Microsoft YaHei;
+}
+
+/* modal box界面 */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px ;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 600px;
+    max-width: 80%;
+  }
+  .modal.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+  }
+  .modal-header .one{
+    flex:1
+  }
+  .modal-header .title {
+    font-size: 1.25rem;
+    display: inline;
+    text-align: center;
+    flex:10;
+    padding: 10px 15px;
+    color:black
+  }
+  .modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    flex:1
+  }
+
+  #overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+    z-index: 9;
+  }
+  #overlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+.next{
+    margin: 10px 250px 30px 250px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    cursor: pointer;
+    border-radius: 4px;
+    height: 40px;
+    color: white;
+}
+
+/* radio */
+  .modal-body {
+    padding: 20px 15px 20px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.modal-radio-group{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:40px
+}
+.input-container {
+    position: relative;
+    height: 9rem;
+    width: 14rem;
+    margin: 0.5rem;
+  }
+.input-container input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    z-index: 20;
+    left:0;
+    opacity: 0;
+  }
+.input-container .radio-tile {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    height: 100%;
+    border: 3px solid  grey;
+    border-radius: 8px;
+    transition: all 300ms ease;
+  }
+.input-container label {
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 10% ;
+    left:10%;
+    max-width: 6rem;
+  }
+.input-container .price{
+    position: absolute;
+    top:10% ;
+    right:10%;
+}
+.input-container .radio-des{
+    position: absolute;
+    top:50% ;
+    left:20%;
+}
+input:hover+.radio-tile {
+    box-shadow: 0 0 12px grey;
+  }
+input:checked+.radio-tile {
+    background-color: white;
+    box-shadow: 0 0 12px grey;
+    transform: scale(1.1);
+    border: 3px solid  RGB( 49,137,239);
+  }
