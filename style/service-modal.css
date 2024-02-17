@@ -67,9 +67,6 @@
 .next{
     margin: 10px 250px 30px 250px;
     background-color: black;
-    /* display: flex;
-    align-items: center;
-    justify-content: center;   */
     cursor: pointer;
     border-radius: 4px;
     width: 100px;
@@ -135,7 +132,7 @@
 .input-container .radio-des{
     position: absolute;
     top:50% ;
-    left:20%;
+    left:12%;
 }
 input:hover+.radio-tile {
     box-shadow: 0 0 12px grey;

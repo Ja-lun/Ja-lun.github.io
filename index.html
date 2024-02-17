@@ -71,7 +71,7 @@
                     </script>
                     </span>
                 ：已有
-                <span class="bullshitnumber">1014</span>
+                <span class="bullshitnumber">54</span>
                 位用户使用了订阅服务</p>
                 <p class="littleshit">感谢用户信任, DeerSub会持续改进。</p>
                 <hr />
@@ -86,11 +86,12 @@
                 <input type="checkbox" name="accordion" id="first" checked>
                 <label for="first" class="biglabel">AI の 订阅</label>
                     <div class="ContentContainer">
-                    <div class="content" id="content0">
+
+                        <div class="content" id="content0">
                         <div class="flexbox AI-item-1">
                             <div class="fleximg"><img src="image/sevice-logo/ChatGPT-Plus.png"></div>
                             <div class="flexh1">ChatGPT Plus</div>
-                            <div class="flexdes">最强大的AI:GPT4,最低仅xx元/月</div>
+                            <div class="flexdes">最强大的AI:GPT4,最低仅40元/月</div>
                             <div  class="flexbut">
                                 <button type="button"  data-modal-target="#modal" class="enter">进入</button>
                                 
@@ -109,8 +110,8 @@
                                                 <input type="radio" id="GPT4together" name="GPT4" value="1">
                                                 <div class="radio-tile">
                                                     <label for="GPT4together" class="smalllabel">共用账号</label>
-                                                    <div class="price">xxx/月</div>
-                                                    <div class="radio-des">xxx</div>
+                                                    <div class="price">40rmb/月</div>
+                                                    <div class="radio-des"> 支付即发账号密码</div>
                                                 </div>
                                             </div>
 
@@ -118,8 +119,8 @@
                                                 <input type="radio" id="GPT4yours" name="GPT4" value="2">
                                                 <div class="radio-tile">
                                                     <label for="GPT4yours">一键订阅</label>
-                                                    <div class="price">xxx/月</div>
-                                                    <div class="radio-des">xxx</div>
+                                                    <div class="price">200rmb/月</div>
+                                                    <div class="radio-des">我们直接为你的账号开通订阅</div>
                                                 </div>
                                             </div>
 
@@ -140,7 +141,7 @@
                         <div class="flexbox AI-item-2">
                             <div class="fleximg"><img src="image/sevice-logo/openai.svg"></div>
                             <div class="flexh1">OpenAI 账户一键注册</div>
-                            <div class="flexdes">GPT3.5,直接提供账号密码</div>
+                            <div class="flexdes">打磨产品中...</div>
                             <div  class="flexbut">
                                 <button type="button" class="enter">进入</button>
                             </div>
@@ -153,28 +154,56 @@
                                 <button type="button" class="enter">进入</button>
                             </div>
                         </div>
+                        </div>
+
+                        <div class="content" id="content1" style="display:none">
+                            <div class="nextcontent">
+                                <div class="left">
+                                    <p class="p1">共用账号订阅</p>
+                                    <p class="p2">支付即发账号密码，直接使用ChatGPT4。<br>无延迟，包不卡顿<br>有效期一个月。</p>
+                                    <p class="p3">有疑问？联系我们</p>
+                                </div>
+                                <div class="right">
+                                    <p class="rightHeader">订单总额</p>
+                                    <p class="rightNumber">￥40 CNY</p>
+                                    <button type="button" class="payButton">
+                                        付款
+                                    </button>
+                                </div>
+                            </div>
+
+                            <button type="button" class="return">
+                                返回
+                            </button>
+                        </div>
+                        
+                        <div class="content" id="content2" style="display:none">
+                            <div class="nextcontent">
+                                <div class="left">
+                                    <p class="p1">为你一键订阅</p>
+                                    <p class="p2">支付后向我们提供你的账号，我们直接为你的账号开通ChatGPT Plus订阅<br></p>
+                                    <p class="p3">有疑问？联系我们</p>
+                                </div>
+                                <div class="right">
+                                    <p class="rightHeader">订单总额</p>
+                                    <p class="rightNumber">￥200 CNY</p>
+                                    <button type="button" class="payButton">
+                                        付款
+                                    </button>
+                                </div>
+                            </div>
+
+                            <button type="button" class="return">
+                                返回
+                            </button>
+                        </div>
+
                     </div>
-                    <div class="content" id="content1" style="display:none">
-                        <div class="flexbox AI-item-1">111</div>
-                        <div class="flexbox AI-item-2">111</div>
-                        <div class="flexbox AI-item-3">111</div>
-                        <button type="button" class="return">
-                            返回
-                        </button>
-                    </div>
-                    <div class="content" id="content2" style="display:none">
-                        <div class="flexbox AI-item-1">222</div>
-                        <div class="flexbox AI-item-2">222</div>
-                        <div class="flexbox AI-item-3">222</div>
-                        <button type="button" class="return">
-                            返回
-                        </button>
-                    </div>
-                </div>
             </li>
             <li>
                 <input type="checkbox" name="accordion" id="second" checked>
                 <label for="second" class="biglabel">影音平台订阅</label>
+                <div class="ContentContainer">
                     <div class="content" style="display:flex">
                         <div class="flexbox Video-item-1">
                             <div class="fleximg"><img src="image/sevice-logo/netflix-icon.svg"></div>
@@ -217,10 +246,12 @@
                             </div>
                         </div>
                     </div>
+                </div>
             </li>
             <li>
                 <input type="checkbox" name="accordion" id="third">
                 <label for="third" class="biglabel">其他平台订阅</label>
+                <div class="ContentContainer">
                     <div class="content" style="display:flex">
                         <div class="flexbox other-item-1">
                             <div class="fleximg"><img src="image/sevice-logo/onlyfans-seeklogo.svg"></div>
@@ -263,10 +294,12 @@
                             </div>
                         </div>
                     </div>
+                </div>
             </li>
             <li>
                 <input type="checkbox" name="accordion" id="fourth">
                 <label for="fourth" class="biglabel">外区工具箱</label>
+                <div class="ContentContainer">
                     <div class="content" style="display:flex">
                         <div class="flexbox tools-1">
                             <div class="fleximg"><img src="image/sevice-logo/phone-call.svg"></div>
@@ -317,10 +350,12 @@
                             </div>
                         </div>
                     </div>
+                </div>
             </li>
         </ul>
     </div>  
 
+</div>
 
 
 
